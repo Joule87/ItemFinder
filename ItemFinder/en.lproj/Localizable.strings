@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  ItemFinder
+
+  Created by Julio Collado on 11/9/19.
+  Copyright © 2019 Julio Collado. All rights reserved.
+*/
+
+///Main
+"main.title" = "Welcome";
+"main.next.button" = "Next";
+
+///Finder
+"finder.searchBar.placeholder" = "Search Item";
+
+///Alerts
+"alert.title.warning" = "Warning";
+"alert.character.limit" = "Twenty is the limit of characters permitted";
+"alert.action.ok" = "OK";
+
+
