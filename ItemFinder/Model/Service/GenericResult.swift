@@ -20,6 +20,13 @@ struct GenericResult<T: Mappable>: Mappable {
         
     }
     
+    init(site_id: String?, query: String?, paging: Paging?, results: [T]?) {
+        self.site_id = site_id
+        self.query = site_id
+        self.paging = paging
+        self.results = results
+    }
+    
     mutating func mapping(map: Map) {
         site_id <- map["site_id"]
         query <- map["query"]

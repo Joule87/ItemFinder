@@ -23,6 +23,13 @@ struct Paging: Mappable {
         primary_results <- map["offset"]
     }
     
+    init(total: Int?, offset: Int?, limit: Int, primary_results: Int?) {
+        self.total = total
+        self.offset = offset
+        self.limit = limit
+        self.primary_results = primary_results
+    }
+    
     init?(map: Map) {
         
     }

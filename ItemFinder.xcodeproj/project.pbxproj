@@ -13,6 +13,8 @@
 		F4158F2F237726910044DDB4 /* ItemFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4158F2E237726910044DDB4 /* ItemFinderViewController.swift */; };
 		F4158F3323772A9D0044DDB4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4158F3223772A9D0044DDB4 /* UIViewExtension.swift */; };
 		F4158F362377351C0044DDB4 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4158F352377351C0044DDB4 /* ItemTableViewCell.swift */; };
+		F42E7114237CBDB3004FC9D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E7113237CBDB3004FC9D1 /* NetworkManager.swift */; };
+		F42E7116237CBDFB004FC9D1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E7115237CBDFB004FC9D1 /* Notifications.swift */; };
 		F43CA12C2377135400A08B9F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F43CA12E2377135400A08B9F /* Localizable.strings */; };
 		F43CA13C237714D600A08B9F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CA13B237714D600A08B9F /* BaseViewController.swift */; };
 		F43CA13E2377157700A08B9F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CA13D2377157700A08B9F /* StringExtension.swift */; };
@@ -64,6 +66,8 @@
 		F4158F2E237726910044DDB4 /* ItemFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFinderViewController.swift; sourceTree = "<group>"; };
 		F4158F3223772A9D0044DDB4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F4158F352377351C0044DDB4 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		F42E7113237CBDB3004FC9D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F42E7115237CBDFB004FC9D1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		F43CA12D2377135400A08B9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F43CA13B237714D600A08B9F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F43CA13D2377157700A08B9F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 			children = (
 				F43CA1312377139300A08B9F /* Extensions */,
 				F43CA1302377138900A08B9F /* Utils */,
+				F42E7115237CBDFB004FC9D1 /* Notifications.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			children = (
 				F43DC3772377637800EC73D7 /* AlamofireRequest.swift */,
 				F4D124D5237765260053667C /* HTTPStatusCode.swift */,
+				F42E7113237CBDB3004FC9D1 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -551,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42E7116237CBDFB004FC9D1 /* Notifications.swift in Sources */,
 				F43DC3782377637800EC73D7 /* AlamofireRequest.swift in Sources */,
 				F447C03B2377118600B8E368 /* MainViewController.swift in Sources */,
 				F4158F362377351C0044DDB4 /* ItemTableViewCell.swift in Sources */,
@@ -565,6 +572,7 @@
 				F4D124D6237765260053667C /* HTTPStatusCode.swift in Sources */,
 				F43DC369237752BF00EC73D7 /* ItemDetailPresenter.swift in Sources */,
 				F4158F2F237726910044DDB4 /* ItemFinderViewController.swift in Sources */,
+				F42E7114237CBDB3004FC9D1 /* NetworkManager.swift in Sources */,
 				F43DC36523774EBF00EC73D7 /* ItemFinderPresenterDelegate.swift in Sources */,
 				F451BEA823776CD0001B651C /* APIItemManager.swift in Sources */,
 				F4158F2D237725EC0044DDB4 /* ItemDetailViewController.swift in Sources */,

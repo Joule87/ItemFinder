@@ -18,9 +18,19 @@ struct ItemDTO: Mappable {
     var available_quantity: Int?
     var thumbnail: String?
     var condition: String?
-   
+    
     init?(map: Map) {
         
+    }
+    
+    init(id: String?, title: String?, price: Int?, currency_id: String?, available_quantity: Int?, thumbnail: String?, condition: String?) {
+        self.id = id
+        self.title = title
+        self.price = price
+        self.currency_id = currency_id
+        self.available_quantity = available_quantity
+        self.thumbnail = thumbnail
+        self.condition = condition
     }
     
     mutating func mapping(map: Map) {
