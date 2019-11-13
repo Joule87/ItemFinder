@@ -23,9 +23,11 @@ class ItemDTOMapper  {
         }
         return Item(id: id,
                     title: title,
-                    price: price, currency: currency,
+                    price: price,
+                    currency: currency,
                     available_quantity: available_quantity,
-                    thumbnail: thumbnail, condition: condition)
+                    thumbnail: thumbnail,
+                    condition: condition)
     }
     
     

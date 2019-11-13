@@ -14,7 +14,7 @@ class Debouncer {
     
     private let timeInterval: TimeInterval
     private var timer: Timer?
-        var handler: Handler?
+    var handler: Handler?
     
     init(timeInterval: TimeInterval) {
         self.timeInterval = timeInterval

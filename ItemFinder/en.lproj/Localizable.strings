@@ -15,7 +15,8 @@
 
 ///Alerts
 "alert.title.warning" = "Warning";
-"alert.character.limit" = "Twenty is the limit of characters permitted";
+"alert.notFound" = "No results found for this search";
+"alert.character.limit" = "Fifty is the limit of characters permitted";
 "alert.action.ok" = "OK";
 
 

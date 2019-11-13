@@ -23,7 +23,7 @@ class ItemFinderViewController: BaseViewController {
         emptyView.translatesAutoresizingMaskIntoConstraints = false
         [emptyView.widthAnchor.constraint(equalToConstant: CGFloat(200)),
          emptyView.heightAnchor.constraint(equalToConstant: CGFloat(200))].forEach{$0.isActive = true}
-        emptyView.layer.cornerRadius = 10
+        emptyView.cornerRadius = 10
         emptyView.backgroundColor = viewColor.withAlphaComponent(alpha)
         
         let label = UILabel()
@@ -93,6 +93,9 @@ extension ItemFinderViewController: UITableViewDataSource {
         guard let item = presenter?.itemList[indexPath.row] else {
             return cell
         }
+        cell.itemNameLabel.text = item.title
+        cell.itemPriceLabel.text = "\(item.currency) \(item.price)"
+        cell.itemImageView.loadImage(fromURL: item.thumbnail)
         
         return cell
     }
@@ -114,7 +117,10 @@ extension ItemFinderViewController: UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        let searchBarCharacterLimit = 19
+        if text.isEmpty {
+            return true
+        }
+        let searchBarCharacterLimit = 49
         if let searchBarText = searchBar.text, searchBarText.count > searchBarCharacterLimit {
             debouncer.invalidateTimer()
             warningMessage(title: "alert.title.warning".localized, message: "alert.character.limit".localized, actionTitle: "alert.action.ok".localized)

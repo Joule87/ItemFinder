@@ -15,10 +15,10 @@ class APIItemManager: APIItemService {
         self.itemAPI = dataRequest
     }
     
-    func fetchItems(query : String, offset: Int = 0, complete: @escaping (Result<GenericResult<ItemDTO>>) -> ()) {
+    func fetchItems(query : String, offset: Int = 0, completion: @escaping (Result<GenericResult<ItemDTO>>) -> ()) {
         let itemDataRequest = itemAPI.fetchItems(query: query, offSet: offset)
         AlamofireRequest.createObjectRequest(request: itemDataRequest) { result in
-            complete(result)
+            completion(result)
         }
     }
 }

@@ -10,13 +10,13 @@ import Foundation
 
 class Item {
     
-    var id: String?
-    var title: String?
-    var price: Int?
-    var currency: String?
-    var available_quantity: Int?
-    var thumbnail: String?
-    var condition: String?
+    var id: String
+    var title: String
+    var price: Int
+    var currency: String
+    var available_quantity: Int
+    var thumbnail: String
+    var condition: String
     
     init(id: String, title: String, price: Int, currency: String, available_quantity: Int, thumbnail: String, condition: String) {
         self.id = id
