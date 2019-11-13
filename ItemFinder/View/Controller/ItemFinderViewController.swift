@@ -147,7 +147,11 @@ extension ItemFinderViewController: ItemFinderViewDelegate {
     
     func itemRequestFailed(_ error: Error) {
         toggleLoading(isEnable: false)
-        //TODO:- Handle Error
+        guard let status = error as? HTTPStatusCode else {
+            return
+        }
+        let description = status.description ?? status.localizedDescription
+        warningMessage(title: "alert.error".localized, message: "\(description)", actionTitle: "alert.action.ok".localized)
     }
     
     
