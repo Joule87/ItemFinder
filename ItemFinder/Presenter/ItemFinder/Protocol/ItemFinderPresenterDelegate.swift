@@ -15,5 +15,6 @@ protocol ItemFinderPresenterDelegate {
 
     init (itemAPIService: APIItemService)
     
+    /// Request items for given query and offset
     func fetchItems(_ query: String, _ offset: Int)
 }

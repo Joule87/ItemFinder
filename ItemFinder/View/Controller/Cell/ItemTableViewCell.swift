@@ -12,8 +12,7 @@ class ItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
-    @IBOutlet weak var itemLocationLabel: UILabel!
-    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var itemImageView: CustomUIImageView!
     
     static let identifier = "ItemTableViewCell"
     

@@ -14,5 +14,5 @@ protocol APIItemService {
     ///   - query: Text to query
     ///   - offset: Define next range of results
     ///   - complete: Action to take
-    func fetchItems(query : String, offset: Int, complete: @escaping (Result<GenericResult<ItemDTO>>) -> ())
+    func fetchItems(query : String, offset: Int, completion: @escaping (Result<GenericResult<ItemDTO>>) -> ())
 }

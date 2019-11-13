@@ -33,7 +33,13 @@ class MainViewController: BaseViewController {
     //MARK:- Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //TODO:- Prepare FinderViewController here
+        if let itemFinderViewController = segue.destination as? ItemFinderViewController {
+            let itemAPI = APIItem()
+            let serviceItemManager = APIItemManager(dataRequest: itemAPI)
+            let itemFinderPresenter = ItemFinderPresenter(itemAPIService: serviceItemManager)
+            itemFinderPresenter.itemFinderViewDelegate = itemFinderViewController
+            itemFinderViewController.presenter = itemFinderPresenter
+        }
     }
     
 

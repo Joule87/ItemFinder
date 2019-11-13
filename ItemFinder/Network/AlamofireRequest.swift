@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
@@ -27,7 +26,23 @@ public class AlamofireRequest {
                     return
                 }
                 completion(.success(object))
-            }
+        }
+    }
+    
+    static func createDataRequest(request: DataRequest, completionHandler completion: @escaping (Data?) -> Void) {
+        request.validate()
+            .responseData {
+                response in
+                if let _ = response.error {
+                    completion(nil)
+                    return
+                }
+                guard let data = response.result.value else{
+                    completion(nil)
+                    return
+                }
+                completion(data)
+        }
     }
     
 }
