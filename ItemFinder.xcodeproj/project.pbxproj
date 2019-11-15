@@ -41,6 +41,7 @@
 		F451BEAA23776D3B001B651C /* APIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451BEA923776D3B001B651C /* APIItem.swift */; };
 		F45AFCFA237B93FE0096DDF3 /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AFCF9237B93FE0096DDF3 /* CustomUIImageView.swift */; };
 		F45AFCFC237B95C10096DDF3 /* APIImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AFCFB237B95C10096DDF3 /* APIImageManager.swift */; };
+		F4A06634237EE3C700697034 /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06633237EE3C700697034 /* Connectable.swift */; };
 		F4B37CB623773DF100BDA767 /* ItemFinderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B37CB523773DF100BDA767 /* ItemFinderViewDelegate.swift */; };
 		F4D124D6237765260053667C /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D124D5237765260053667C /* HTTPStatusCode.swift */; };
 		F4D124D82377657F0053667C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D124D72377657F0053667C /* Result.swift */; };
@@ -98,6 +99,7 @@
 		F451BEA923776D3B001B651C /* APIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIItem.swift; sourceTree = "<group>"; };
 		F45AFCF9237B93FE0096DDF3 /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
 		F45AFCFB237B95C10096DDF3 /* APIImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImageManager.swift; sourceTree = "<group>"; };
+		F4A06633237EE3C700697034 /* Connectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
 		F4B37CB523773DF100BDA767 /* ItemFinderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFinderViewDelegate.swift; sourceTree = "<group>"; };
 		F4D124D5237765260053667C /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		F4D124D72377657F0053667C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				F43DC3772377637800EC73D7 /* AlamofireRequest.swift */,
 				F4D124D5237765260053667C /* HTTPStatusCode.swift */,
 				F42E7113237CBDB3004FC9D1 /* NetworkManager.swift */,
+				F4A06633237EE3C700697034 /* Connectable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				F451BEA5237769AF001B651C /* APIItemService.swift in Sources */,
 				F43DC370237758D800EC73D7 /* Paging.swift in Sources */,
 				F447C0372377118600B8E368 /* AppDelegate.swift in Sources */,
+				F4A06634237EE3C700697034 /* Connectable.swift in Sources */,
 				F4158F3323772A9D0044DDB4 /* UIViewExtension.swift in Sources */,
 				F447C0392377118600B8E368 /* SceneDelegate.swift in Sources */,
 				F43DC360237742F600EC73D7 /* Debouncer.swift in Sources */,
