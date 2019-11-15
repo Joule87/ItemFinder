@@ -17,10 +17,19 @@ public class AlamofireRequest {
         request.validate()
             .responseObject {
                 (response: DataResponse<T>) in
+                
+                ///check server  error
                 if let _ = response.error, let urlStatusResponse = response.response?.status {
                     completion(.failure(error: urlStatusResponse, data: response.data))
                     return
                 }
+                
+                ///check alamofire error
+                if let error = response.error {
+                    completion(.failure(error: error, data: nil))
+                    return
+                }
+                
                 guard let object = response.result.value else{
                     completion(.failure(error: HTTPStatusCode.noContent, data: response.data))
                     return

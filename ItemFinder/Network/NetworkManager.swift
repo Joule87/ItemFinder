@@ -13,6 +13,8 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.google.com")
+    private(set) static var isConected = false
+    
     private init() {}
     
     ///Start listening for network reachability status changes.
@@ -21,10 +23,12 @@ class NetworkManager {
         reachabilityManager?.listener = { status in
             switch status {
             case .notReachable:
+                NetworkManager.isConected = false
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: Notifications.NetworkNotReachable), object: nil, userInfo: nil)
             case .unknown :
                 break
             case .reachable(.ethernetOrWiFi):
+                NetworkManager.isConected = true
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: Notifications.NetworkReachable), object: nil, userInfo: nil)
             case .reachable(.wwan):
                 break
