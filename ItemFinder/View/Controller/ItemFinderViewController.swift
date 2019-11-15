@@ -100,6 +100,17 @@ extension ItemFinderViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let itemList = presenter?.itemList, let textQuery = (navigationItem.titleView as? UISearchBar)?.text, !textQuery.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            return
+        }
+        
+        if indexPath.row == (itemList.count - 10) {
+            let offset = itemList.count + 1
+            presenter?.fetchItems(textQuery, offset)
+        }
+    }
+    
 }
 
 extension ItemFinderViewController: UISearchBarDelegate {
@@ -115,7 +126,7 @@ extension ItemFinderViewController: UISearchBarDelegate {
         }
         debouncer.renewTimer()
     }
-
+    
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text.isEmpty {
             return true
