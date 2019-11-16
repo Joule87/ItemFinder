@@ -36,7 +36,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to ItemFinder ML!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZx-VZ-hQ2">
                                 <rect key="frame" x="52" y="433" width="310" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.1531108477655021" green="0.1531108477655021" blue="0.1531108477655021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
@@ -224,20 +224,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P61-S5-rUU" customClass="CustomUIImageView" customModule="ItemFinder" customModuleProvider="target">
-                                                <rect key="frame" x="107" y="20" width="200" height="150"/>
+                                                <rect key="frame" x="122" y="20" width="150" height="150"/>
                                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="kiU-X4-TIO"/>
                                                     <constraint firstAttribute="height" constant="150" id="uO5-6y-lWK"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="0.20000000000000001"/>
+                                                        <real key="value" value="0.29999999999999999"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
@@ -327,13 +328,12 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="P61-S5-rUU" firstAttribute="leading" secondItem="XfU-Hn-Rli" secondAttribute="leading" constant="107" id="2TJ-0S-vud"/>
                                             <constraint firstItem="P61-S5-rUU" firstAttribute="top" secondItem="XfU-Hn-Rli" secondAttribute="top" constant="20" id="J0A-By-tUn"/>
                                             <constraint firstItem="3ml-lX-waf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XfU-Hn-Rli" secondAttribute="leading" constant="20" symbolic="YES" id="MGT-Fq-XyQ"/>
                                             <constraint firstItem="kGD-VJ-7lZ" firstAttribute="top" secondItem="3ml-lX-waf" secondAttribute="bottom" constant="10" id="Ob2-gY-UCg"/>
                                             <constraint firstItem="kGD-VJ-7lZ" firstAttribute="leading" secondItem="XfU-Hn-Rli" secondAttribute="leading" constant="20" id="P7B-Ur-uJm"/>
-                                            <constraint firstAttribute="trailing" secondItem="P61-S5-rUU" secondAttribute="trailing" constant="107" id="Q9S-ii-HMz"/>
                                             <constraint firstAttribute="trailing" secondItem="kGD-VJ-7lZ" secondAttribute="trailing" constant="20" id="Srt-YT-1ba"/>
+                                            <constraint firstItem="P61-S5-rUU" firstAttribute="centerX" secondItem="XfU-Hn-Rli" secondAttribute="centerX" constant="-10" id="a1t-lI-vcf"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kGD-VJ-7lZ" secondAttribute="bottom" constant="144" id="mej-zp-ubZ"/>
                                             <constraint firstAttribute="trailing" secondItem="3ml-lX-waf" secondAttribute="trailing" constant="20" id="orq-eL-62Z"/>
                                             <constraint firstItem="3ml-lX-waf" firstAttribute="top" secondItem="P61-S5-rUU" secondAttribute="bottom" constant="10" id="sQU-Q2-HF7"/>
