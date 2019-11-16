@@ -8,6 +8,6 @@
 
 import Foundation
 
-class ItemDetailPresenter {
-    
+class ItemDetailPresenter: ItemDetailPresenterDelegate {
+    var item: Item?
 }

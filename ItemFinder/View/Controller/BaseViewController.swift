@@ -51,6 +51,7 @@ class BaseViewController: UIViewController, Connectable {
         super.viewWillAppear(animated)
         registerForNotificationsOnAppearAndDisappear()
         updateUIConnectionStatus()
+        setupNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -84,6 +85,11 @@ class BaseViewController: UIViewController, Connectable {
         }
         alert.addAction(action)
         present(alert, animated: true)
+    }
+
+    ///Setup  initial navigation bar state
+    func setupNavigationBar() {
+     
     }
     
 }

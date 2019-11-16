@@ -59,7 +59,6 @@ class ItemFinderViewController: BaseViewController {
     ///Set initial configuration for all UI elements
     func setupUIElements() {
         setupSearchBar()
-        navigationController?.hidesBarsOnSwipe = true
     }
     
     ///Add a SearchBar to the currrent NavigationBar
@@ -71,15 +70,32 @@ class ItemFinderViewController: BaseViewController {
         navigationItem.titleView = searchBar
     }
     
+    override func setupNavigationBar() {
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.hidesBarsOnSwipe = true
+        navigationItem.titleView?.becomeFirstResponder()
+    }
+    
     //MARK:- Actions
     
     //MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationViewController = segue.destination as? ItemDetailViewController else {
+            return
+        }
+        let itemDetailPresenter = ItemDetailPresenter()
+        if let index = itemTableView.indexPathForSelectedRow?.row {
+            itemDetailPresenter.item = presenter?.itemList[index]
+        }
+        destinationViewController.presenter = itemDetailPresenter
+    }
     
 }
 
 extension ItemFinderViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: "SegueItemDetail", sender: self)
+        itemTableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -158,6 +174,7 @@ extension ItemFinderViewController: ItemFinderViewDelegate {
     
     func itemRequestFailed(_ error: Error) {
         toggleLoading(isEnable: false)
+        itemTableView.reloadData()
         var description = error.localizedDescription
         if let status = error as? HTTPStatusCode, let statusDescription = status.description{
             description = statusDescription

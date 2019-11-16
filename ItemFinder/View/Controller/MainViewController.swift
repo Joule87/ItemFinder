@@ -12,6 +12,7 @@ class MainViewController: BaseViewController {
 
     //MARK:- Outlets
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     //MARK:- Properties
 
@@ -24,8 +25,13 @@ class MainViewController: BaseViewController {
     //MARK:- View Controller Functions
     ///Set initial configuration for all UI elements
     func setupUIElements() {
-        title = "main.title".localized
+        welcomeLabel.text = "main.welcome.label".localized
         nextButton.setTitle("main.next.button".localized, for: .normal)
+    }
+    
+    override func setupNavigationBar() {
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.hidesBarsOnSwipe = false
     }
     
     //MARK:- Actions
