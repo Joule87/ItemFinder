@@ -7,11 +7,15 @@
 */
 
 ///Main
-"main.title" = "Welcome";
+"main.welcome.label" = "Welcome to ItemFinder ML!";
 "main.next.button" = "Next";
 
 ///Finder
 "finder.searchBar.placeholder" = "Search Item";
+
+///Item Detail
+"detail.label.stock" = "Stock:";
+"detail.button.saveImage" = "Save Image";
 
 ///Alerts
 "alert.error" = "Error";
@@ -21,7 +25,7 @@
 "alert.action.ok" = "OK";
 "alert.notInternetConection" = "No Internet Found check your connection";
 
-//Error Message
+///Error Message
 "error.range300" = "The operation could not be completed";
 "error.range400" = "Sorry, something went wrong. We are working on it and we'll get it fixed as soon as we can";
 "error.range500" = "Service unavailable, please try later";

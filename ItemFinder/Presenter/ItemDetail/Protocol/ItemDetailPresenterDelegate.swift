@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ItemDetailPresenterDelegate {
-    
+    var item: Item? { set get }
 }
