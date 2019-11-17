@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class ItemDetailViewController: BaseViewController {
 
@@ -61,10 +62,58 @@ class ItemDetailViewController: BaseViewController {
         navigationController?.hidesBarsOnSwipe = false
     }
     
+    ///Save Image in Photo Album directory
+    func saveImage() {
+        DispatchQueue.main.async {
+            guard let image = self.itemImageView.image else {
+                return
+            }
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            self.warningMessage(title: "alert.success".localized, message: "alert.success.imageSaved".localized, actionTitle: "alert.action.ok".localized)
+        }
+        
+    }
+  
+    
+    ///Show an alert warning the user that access to Photo Album is denied and permissions must be granted from device Settings
+    func warnAccessDenied() {
+        DispatchQueue.main.async {
+            let deniedAlert = UIAlertController(title: "alert.title.photoLibraryDenied".localized, message: "alert.message.photoLibraryDenied".localized, preferredStyle: .alert)
+            let goToSettingsAction = UIAlertAction(title: "alert.button.goToSettings".localized, style: .default) { action in
+                guard let url = URL(string: UIApplication.openSettingsURLString) else {
+                    return
+                }
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:])
+                }
+            }
+            let cancelAction =  UIAlertAction(title: "alert.action.cancel".localized, style: .cancel)
+            deniedAlert.addAction(goToSettingsAction)
+            deniedAlert.addAction(cancelAction)
+            self.present(deniedAlert, animated: true)
+        }
+    }
+    
     //MARK:- Actions
 
     @IBAction func TappedSaveImageButton(_ sender: UIButton) {
-        //TODO:- Save Image in Album Photo
+        PHPhotoLibrary.requestAuthorization() { (status) -> Void in
+            switch status {
+            case .notDetermined:
+                if status == PHAuthorizationStatus.authorized {
+                    self.saveImage()
+                }
+            case .restricted:
+                self.warningMessage(title: "alert.title.photoLibraryRestricted".localized, message: "alert.message.photoLibraryRestricted".localized, actionTitle: "alert.action.ok".localized)
+            case .denied:
+                self.warnAccessDenied()
+            case .authorized:
+                self.saveImage()
+            @unknown default:
+                ///Log status
+                break
+            }
+        }
     }
     
     //MARK:- Navigation
