@@ -19,11 +19,19 @@
 
 ///Alerts
 "alert.error" = "Error";
+"alert.success" = "Success";
+"alert.success.imageSaved" = "Image was saved";
 "alert.title.warning" = "Warning";
 "alert.notFound" = "No results found for this search";
 "alert.character.limit" = "Fifty is the limit of characters permitted";
 "alert.action.ok" = "OK";
+"alert.action.cancel" = "Cancel";
 "alert.notInternetConection" = "No Internet Found check your connection";
+"alert.title.photoLibraryRestricted" = "Photo Access Library Resticted";
+"alert.message.photoLibraryRestricted" = "Photo Library Access is Restricted and can't be access";
+"alert.title.photoLibraryDenied" = "Photo Access Library Denied";
+"alert.message.photoLibraryDenied" = "Photo Library Access was previously denied. Saving picture won't work without this permission. Please update your Settings if you wish to change this";
+"alert.button.goToSettings" = "Go to Settings";
 
 ///Error Message
 "error.range300" = "The operation could not be completed";
