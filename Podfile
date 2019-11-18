@@ -11,7 +11,8 @@ target 'ItemFinder' do
     # Pods for testing
   end
 pod 'Alamofire'
-pod 'ObjectMapper'
 pod 'AlamofireObjectMapper'
+pod 'SwiftyBeaver'
+pod 'ObjectMapper'
 pod 'KRProgressHUD'
 end

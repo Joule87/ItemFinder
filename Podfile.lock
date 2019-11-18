@@ -7,12 +7,14 @@ PODS:
   - KRProgressHUD (3.4.4):
     - KRActivityIndicatorView (= 3.0.4)
   - ObjectMapper (3.5.1)
+  - SwiftyBeaver (1.8.3)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
   - KRProgressHUD
   - ObjectMapper
+  - SwiftyBeaver
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - KRActivityIndicatorView
     - KRProgressHUD
     - ObjectMapper
+    - SwiftyBeaver
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
   KRProgressHUD: c3b9a48a0ee4824ea13212ac3f1efa50dca021e3
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SwiftyBeaver: 3d3e93a12d648bd400b6f2948a7ef128b5b183c7
 
-PODFILE CHECKSUM: f93a8e8f88343e4341782343179a47549e2d4900
+PODFILE CHECKSUM: 88d60e1dcb8b4bbc2a7955ca03592d6be0c429b3
 
 COCOAPODS: 1.5.3

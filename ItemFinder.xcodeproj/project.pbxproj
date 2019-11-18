@@ -15,6 +15,7 @@
 		F4158F362377351C0044DDB4 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4158F352377351C0044DDB4 /* ItemTableViewCell.swift */; };
 		F42E7114237CBDB3004FC9D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E7113237CBDB3004FC9D1 /* NetworkManager.swift */; };
 		F42E7116237CBDFB004FC9D1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E7115237CBDFB004FC9D1 /* Notifications.swift */; };
+		F43481602382B49C00F0F7BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434815F2382B49C00F0F7BD /* Constants.swift */; };
 		F43CA12C2377135400A08B9F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F43CA12E2377135400A08B9F /* Localizable.strings */; };
 		F43CA13C237714D600A08B9F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CA13B237714D600A08B9F /* BaseViewController.swift */; };
 		F43CA13E2377157700A08B9F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CA13D2377157700A08B9F /* StringExtension.swift */; };
@@ -43,6 +44,7 @@
 		F45AFCFC237B95C10096DDF3 /* APIImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AFCFB237B95C10096DDF3 /* APIImageManager.swift */; };
 		F4A06634237EE3C700697034 /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06633237EE3C700697034 /* Connectable.swift */; };
 		F4B37CB623773DF100BDA767 /* ItemFinderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B37CB523773DF100BDA767 /* ItemFinderViewDelegate.swift */; };
+		F4C993692382248500280976 /* SwiftyBeaverLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C993682382248500280976 /* SwiftyBeaverLogger.swift */; };
 		F4D124D6237765260053667C /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D124D5237765260053667C /* HTTPStatusCode.swift */; };
 		F4D124D82377657F0053667C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D124D72377657F0053667C /* Result.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,7 @@
 		F4158F352377351C0044DDB4 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		F42E7113237CBDB3004FC9D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F42E7115237CBDFB004FC9D1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		F434815F2382B49C00F0F7BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F43CA12D2377135400A08B9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F43CA13B237714D600A08B9F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F43CA13D2377157700A08B9F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		F45AFCFB237B95C10096DDF3 /* APIImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImageManager.swift; sourceTree = "<group>"; };
 		F4A06633237EE3C700697034 /* Connectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
 		F4B37CB523773DF100BDA767 /* ItemFinderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFinderViewDelegate.swift; sourceTree = "<group>"; };
+		F4C993682382248500280976 /* SwiftyBeaverLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyBeaverLogger.swift; sourceTree = "<group>"; };
 		F4D124D5237765260053667C /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		F4D124D72377657F0053667C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F82ABB985A8E3B2388A0DCBE /* Pods-ItemFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItemFinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ItemFinderTests/Pods-ItemFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				F43CA1312377139300A08B9F /* Extensions */,
 				F43CA1302377138900A08B9F /* Utils */,
 				F42E7115237CBDFB004FC9D1 /* Notifications.swift */,
+				F434815F2382B49C00F0F7BD /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			children = (
 				F43DC35F237742F600EC73D7 /* Debouncer.swift */,
 				F45AFCF9237B93FE0096DDF3 /* CustomUIImageView.swift */,
+				F4C993682382248500280976 /* SwiftyBeaverLogger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -547,6 +554,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -574,6 +582,7 @@
 				F43DC36B237752D700EC73D7 /* ItemDetailPresenterDelegate.swift in Sources */,
 				F4D124D6237765260053667C /* HTTPStatusCode.swift in Sources */,
 				F43DC369237752BF00EC73D7 /* ItemDetailPresenter.swift in Sources */,
+				F4C993692382248500280976 /* SwiftyBeaverLogger.swift in Sources */,
 				F4158F2F237726910044DDB4 /* ItemFinderViewController.swift in Sources */,
 				F42E7114237CBDB3004FC9D1 /* NetworkManager.swift in Sources */,
 				F43DC36523774EBF00EC73D7 /* ItemFinderPresenterDelegate.swift in Sources */,
@@ -582,6 +591,7 @@
 				F4D124D82377657F0053667C /* Result.swift in Sources */,
 				F43CA13E2377157700A08B9F /* StringExtension.swift in Sources */,
 				F43DC3722377598B00EC73D7 /* Item.swift in Sources */,
+				F43481602382B49C00F0F7BD /* Constants.swift in Sources */,
 				F43DC36E2377587800EC73D7 /* GenericResult.swift in Sources */,
 				F451BEA5237769AF001B651C /* APIItemService.swift in Sources */,
 				F43DC370237758D800EC73D7 /* Paging.swift in Sources */,
