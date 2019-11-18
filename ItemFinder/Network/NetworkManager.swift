@@ -9,13 +9,21 @@
 import Foundation
 import Alamofire
 
+///Provide network reachability observer
 class NetworkManager {
     
     static let shared = NetworkManager()
-    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.google.com")
+    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: Constants.Network.googleURL)
     private(set) static var isConected = false
+
     
-    private init() {}
+    private init() {
+        Logger.info(Constants.Logs.networkManagerStart)
+    }
+    
+    deinit {
+        Logger.info(Constants.Logs.networkManagerStop)
+    }
     
     ///Start listening for network reachability status changes.
     func startNetworkReachabilityObserver() {
@@ -26,6 +34,7 @@ class NetworkManager {
                 NetworkManager.isConected = false
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: Notifications.NetworkNotReachable), object: nil, userInfo: nil)
             case .unknown :
+                Logger.warning(status)
                 break
             case .reachable(.ethernetOrWiFi):
                 NetworkManager.isConected = true
@@ -37,6 +46,6 @@ class NetworkManager {
         }
         
         reachabilityManager?.startListening()
-        
+        Logger.info(Constants.Logs.networkManagerListening)
     }
 }

@@ -110,7 +110,7 @@ class ItemDetailViewController: BaseViewController {
             case .authorized:
                 self.saveImage()
             @unknown default:
-                ///Log status
+                Logger.warning(status)
                 break
             }
         }
