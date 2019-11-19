@@ -21,6 +21,7 @@ class ItemDetailViewController: BaseViewController {
     
     //MARK:- Properties
     var presenter: ItemDetailPresenterDelegate?
+    static let identifier = "ItemDetailViewController"
 
     //MARK:- View Controller Lifecycle
     override func viewWillAppear(_ animated: Bool) {
