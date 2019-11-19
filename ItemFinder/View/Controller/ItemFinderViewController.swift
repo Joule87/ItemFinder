@@ -14,7 +14,8 @@ class ItemFinderViewController: BaseViewController {
     
     //MARK:- Properties
     var presenter: ItemFinderPresenterDelegate?
-    private let debouncer = Debouncer(timeInterval: 0.5)
+    var debouncer: Debouncer?
+    static let identifier = "ItemFinderViewController"
     
     private lazy var itemNotFoundView: UIView = {
         let alpha: CGFloat = 0.2
@@ -133,14 +134,14 @@ extension ItemFinderViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let text = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty, let query = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-            debouncer.invalidateTimer()
+            debouncer?.invalidateTimer()
             return
         }
-        debouncer.handler = {
+        debouncer?.handler = {
             self.toggleLoading(isEnable: true)
             self.presenter?.fetchItems(query, 0)
         }
-        debouncer.renewTimer()
+        debouncer?.renewTimer()
     }
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -149,7 +150,7 @@ extension ItemFinderViewController: UISearchBarDelegate {
         }
         let searchBarCharacterLimit = 49
         if let searchBarText = searchBar.text, searchBarText.count > searchBarCharacterLimit {
-            debouncer.invalidateTimer()
+            debouncer?.invalidateTimer()
             warningMessage(title: "alert.title.warning".localized, message: "alert.character.limit".localized, actionTitle: "alert.action.ok".localized)
             return false
         }

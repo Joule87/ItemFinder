@@ -15,6 +15,7 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     
     //MARK:- Properties
+    static let identifier = "MainViewController"
 
     //MARK:- View Controller Lifecycle
     override func viewDidLoad() {
@@ -45,6 +46,7 @@ class MainViewController: BaseViewController {
             let itemFinderPresenter = ItemFinderPresenter(itemAPIService: serviceItemManager)
             itemFinderPresenter.itemFinderViewDelegate = itemFinderViewController
             itemFinderViewController.presenter = itemFinderPresenter
+            itemFinderViewController.debouncer = Debouncer(timeInterval: 0.5)
         }
     }
     

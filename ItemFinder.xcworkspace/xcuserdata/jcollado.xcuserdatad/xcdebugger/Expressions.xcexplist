@@ -3,6 +3,30 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in ItemFinderPresenter.fetchItems(_:_:):ItemFinderPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "itemList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HTTPStatusCodeTests.test_Description_NotNil():HTTPStatusCodeTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "statusCode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ItemFinderViewControllerTests.test_viewDidLoad_OneOption_RenderItemInfo():ItemFinderViewControllerTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell?.itemPriceLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CustomUIImageView.processImageData(_:for:):CustomUIImageView.swift">
          <PersistentStrings>
             <PersistentString
