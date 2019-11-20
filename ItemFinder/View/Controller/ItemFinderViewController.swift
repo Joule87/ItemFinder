@@ -151,7 +151,7 @@ extension ItemFinderViewController: UISearchBarDelegate {
         let searchBarCharacterLimit = 49
         if let searchBarText = searchBar.text, searchBarText.count > searchBarCharacterLimit {
             debouncer?.invalidateTimer()
-            warningMessage(title: "alert.title.warning".localized, message: "alert.character.limit".localized, actionTitle: "alert.action.ok".localized)
+            AlertHelper.showBasicAlert(on: self, with: "alert.title.warning".localized, message: "alert.character.limit".localized, actionTitle: "alert.action.ok".localized)
             return false
         }
         return true
@@ -180,7 +180,7 @@ extension ItemFinderViewController: ItemFinderViewDelegate {
         if let status = error as? HTTPStatusCode, let statusDescription = status.description{
             description = statusDescription
         }
-        warningMessage(title: "alert.error".localized, message: "\(description)", actionTitle: "alert.action.ok".localized)
+        AlertHelper.showBasicAlert(on: self, with: "alert.error".localized, message: "\(description)", actionTitle: "alert.action.ok".localized)
     }
     
     

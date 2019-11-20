@@ -70,7 +70,7 @@ class ItemDetailViewController: BaseViewController {
                 return
             }
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-            self.warningMessage(title: "alert.success".localized, message: "alert.success.imageSaved".localized, actionTitle: "alert.action.ok".localized)
+            AlertHelper.showBasicAlert(on: self, with: "alert.success".localized, message: "alert.success.imageSaved".localized, actionTitle: "alert.action.ok".localized)
         }
         
     }
@@ -105,7 +105,7 @@ class ItemDetailViewController: BaseViewController {
                     self.saveImage()
                 }
             case .restricted:
-                self.warningMessage(title: "alert.title.photoLibraryRestricted".localized, message: "alert.message.photoLibraryRestricted".localized, actionTitle: "alert.action.ok".localized)
+                AlertHelper.showBasicAlert(on: self, with:  "alert.title.photoLibraryRestricted".localized, message: "alert.message.photoLibraryRestricted".localized, actionTitle: "alert.action.ok".localized)
             case .denied:
                 self.warnAccessDenied()
             case .authorized:
