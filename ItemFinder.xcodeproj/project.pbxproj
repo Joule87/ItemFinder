@@ -16,6 +16,7 @@
 		F42E7114237CBDB3004FC9D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E7113237CBDB3004FC9D1 /* NetworkManager.swift */; };
 		F42E7116237CBDFB004FC9D1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E7115237CBDFB004FC9D1 /* Notifications.swift */; };
 		F43481602382B49C00F0F7BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434815F2382B49C00F0F7BD /* Constants.swift */; };
+		F437743F2385A1790065C27C /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437743E2385A1790065C27C /* AlertHelper.swift */; };
 		F43B2D1E238321D100910926 /* RequestStatusMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B2D1D238321D100910926 /* RequestStatusMock.swift */; };
 		F43B2D20238328FE00910926 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B2D1F238328FE00910926 /* Constants.swift */; };
 		F43CA12C2377135400A08B9F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F43CA12E2377135400A08B9F /* Localizable.strings */; };
@@ -83,6 +84,7 @@
 		F42E7113237CBDB3004FC9D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F42E7115237CBDFB004FC9D1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		F434815F2382B49C00F0F7BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F437743E2385A1790065C27C /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		F43B2D1D238321D100910926 /* RequestStatusMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatusMock.swift; sourceTree = "<group>"; };
 		F43B2D1F238328FE00910926 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F43CA12D2377135400A08B9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				F43DC35F237742F600EC73D7 /* Debouncer.swift */,
 				F45AFCF9237B93FE0096DDF3 /* CustomUIImageView.swift */,
 				F4C993682382248500280976 /* SwiftyBeaverLogger.swift */,
+				F437743E2385A1790065C27C /* AlertHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				F45AFCFA237B93FE0096DDF3 /* CustomUIImageView.swift in Sources */,
 				F45AFCFC237B95C10096DDF3 /* APIImageManager.swift in Sources */,
 				F43DC36B237752D700EC73D7 /* ItemDetailPresenterDelegate.swift in Sources */,
+				F437743F2385A1790065C27C /* AlertHelper.swift in Sources */,
 				F4D124D6237765260053667C /* HTTPStatusCode.swift in Sources */,
 				F43DC369237752BF00EC73D7 /* ItemDetailPresenter.swift in Sources */,
 				F4C993692382248500280976 /* SwiftyBeaverLogger.swift in Sources */,

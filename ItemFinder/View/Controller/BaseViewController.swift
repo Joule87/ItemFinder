@@ -72,20 +72,6 @@ class BaseViewController: UIViewController, Connectable {
             KRProgressHUD.dismiss()
         }
     }
-    
-    /// Displays an AlertViewController
-    /// - Parameters:
-    ///   - title: Alert title
-    ///   - message: Info message
-    ///   - actionTitle: Name of dismiss button
-    func warningMessage(title: String, message: String, actionTitle: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: actionTitle, style: .default) { (action) in
-            self.dismiss(animated: true)
-        }
-        alert.addAction(action)
-        present(alert, animated: true)
-    }
 
     ///Setup  initial navigation bar state
     func setupNavigationBar() {
