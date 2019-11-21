@@ -31,7 +31,7 @@ class BaseViewController: UIViewController, Connectable {
         stack.axis = .vertical
         stack.spacing = 8
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.contentMode = .scaleAspectFit
+        stack.contentMode = .scaleToFill
         
         emptyView.addSubview(stack)
         
@@ -73,9 +73,10 @@ class BaseViewController: UIViewController, Connectable {
         }
     }
 
-    ///Setup  initial navigation bar state
+    ///Setup initial navigation bar state
     func setupNavigationBar() {
-     
+        let newBackButton = UIBarButtonItem.init(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.topItem?.backBarButtonItem = newBackButton
     }
     
 }
