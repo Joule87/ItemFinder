@@ -27,7 +27,9 @@ class MainViewController: BaseViewController {
     ///Set initial configuration for all UI elements
     func setupUIElements() {
         welcomeLabel.text = "main.welcome.label".localized
+        welcomeLabel.accessibilityIdentifier = AccessibilityIdentifier.MainViewController.welcomeLabel
         nextButton.setTitle("main.next.button".localized, for: .normal)
+        nextButton.accessibilityIdentifier = AccessibilityIdentifier.MainViewController.nextButton
     }
     
     override func setupNavigationBar() {

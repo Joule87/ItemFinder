@@ -90,7 +90,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="166" id="rIc-Uq-0P7" userLabel="Item Table View Cell" customClass="ItemTableViewCell" customModule="ItemFinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="166"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rIc-Uq-0P7" id="cGV-eM-37Q">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rIc-Uq-0P7" id="cGV-eM-37Q">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -177,6 +177,10 @@
                                                 <constraint firstItem="2Bf-Tc-zwH" firstAttribute="leading" secondItem="cGV-eM-37Q" secondAttribute="leading" constant="10" id="pHC-St-Bim"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="itemImageView" destination="ktP-64-N1w" id="W3T-9Y-7fd"/>
                                             <outlet property="itemNameLabel" destination="uEb-h0-PBq" id="AN0-6B-OZY"/>
@@ -226,6 +230,9 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P61-S5-rUU" customClass="CustomUIImageView" customModule="ItemFinder" customModuleProvider="target">
                                                 <rect key="frame" x="122" y="20" width="150" height="150"/>
                                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="kiU-X4-TIO"/>
                                                     <constraint firstAttribute="height" constant="150" id="uO5-6y-lWK"/>

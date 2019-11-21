@@ -13,7 +13,7 @@ class ItemDTOMapper  {
     static func map(_ dto: ItemDTO) -> Item? {
         
         guard let id = dto.id,
-            let title = dto.title,
+            let title = dto.title?.decodingHTMLEntities(),
             let price = dto.price,
             let currency = dto.currency_id,
             let available_quantity = dto.available_quantity,

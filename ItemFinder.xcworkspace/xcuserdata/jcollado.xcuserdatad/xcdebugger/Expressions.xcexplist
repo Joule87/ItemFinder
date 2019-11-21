@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ItemDetailViewControllerTests.test_UIComponents_Exist():ItemDetailViewControllerTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "elementsQuery.images[AccessibilityIdentifier.ItemDetailViewController.imageView].exists">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in ItemFinderPresenter.fetchItems(_:_:):ItemFinderPresenter.swift">
          <PersistentStrings>
             <PersistentString
@@ -31,6 +39,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.imageUrlString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ItemFinderViewControllerUITests.test_UIComponent_isExist():ItemFinderViewControllerUITests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "app.tables.cells.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

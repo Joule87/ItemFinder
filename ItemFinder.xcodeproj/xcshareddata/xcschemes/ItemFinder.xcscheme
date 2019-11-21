@@ -39,6 +39,16 @@
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F4F7A4E02385B35E006F549A"
+               BuildableName = "ItemFinderUITests.xctest"
+               BlueprintName = "ItemFinderUITests"
+               ReferencedContainer = "container:ItemFinder.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

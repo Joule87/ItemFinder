@@ -26,17 +26,18 @@ class ItemDetailViewController: BaseViewController {
     //MARK:- View Controller Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupUIElements()
+        updateUIElements()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUIElementsAccessibility()
         saveImageButton.setTitle("detail.button.saveImage".localized, for: .normal)
     }
     
     //MARK:- View Controller Functions
-    ///Set initial configuration for all UI elements
-    func setupUIElements() {
+    ///Update UI elements configuration
+    func updateUIElements() {
         guard let item = presenter?.item else {
             return
         }
@@ -51,6 +52,16 @@ class ItemDetailViewController: BaseViewController {
         
     }
     
+    ///Set accessibility identifier to every ui element
+    func setUIElementsAccessibility() {
+        itemImageView.accessibilityIdentifier = AccessibilityIdentifier.ItemDetailViewController.imageView
+        saveImageButton.accessibilityIdentifier = AccessibilityIdentifier.ItemDetailViewController.saveImageButton
+        conditionLabel.accessibilityIdentifier = AccessibilityIdentifier.ItemDetailViewController.conditionLabel
+        titleLabel.accessibilityIdentifier = AccessibilityIdentifier.ItemDetailViewController.titleLabel
+        priceLabel.accessibilityIdentifier = AccessibilityIdentifier.ItemDetailViewController.priceLabel
+        stockLabel.accessibilityIdentifier = AccessibilityIdentifier.ItemDetailViewController.stockLabel
+    }
+    
     ///Update the state of saveImageButton
     func updateButtonState() {
         let imageExist = self.itemImageView.image != nil
@@ -59,6 +70,7 @@ class ItemDetailViewController: BaseViewController {
     }
     
     override func setupNavigationBar() {
+        super.setupNavigationBar()
         navigationController?.isNavigationBarHidden = false
         navigationController?.hidesBarsOnSwipe = false
     }
@@ -78,20 +90,13 @@ class ItemDetailViewController: BaseViewController {
     
     ///Show an alert warning the user that access to Photo Album is denied and permissions must be granted from device Settings
     func warnAccessDenied() {
-        DispatchQueue.main.async {
-            let deniedAlert = UIAlertController(title: "alert.title.photoLibraryDenied".localized, message: "alert.message.photoLibraryDenied".localized, preferredStyle: .alert)
-            let goToSettingsAction = UIAlertAction(title: "alert.button.goToSettings".localized, style: .default) { action in
-                guard let url = URL(string: UIApplication.openSettingsURLString) else {
-                    return
-                }
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:])
-                }
+        AlertHelper.showTwoOptionAlert(on: self, with: "alert.title.photoLibraryDenied".localized, message: "alert.message.photoLibraryDenied".localized, firstActionTitle: "alert.action.cancel".localized, secondActionTitle: "alert.button.goToSettings".localized) {
+            guard let url = URL(string: UIApplication.openSettingsURLString) else {
+                return
             }
-            let cancelAction =  UIAlertAction(title: "alert.action.cancel".localized, style: .cancel)
-            deniedAlert.addAction(goToSettingsAction)
-            deniedAlert.addAction(cancelAction)
-            self.present(deniedAlert, animated: true)
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:])
+            }
         }
     }
     

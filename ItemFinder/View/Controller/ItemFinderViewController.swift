@@ -67,11 +67,13 @@ class ItemFinderViewController: BaseViewController {
         let searchBar = UISearchBar()
         searchBar.sizeToFit()
         searchBar.placeholder = "finder.searchBar.placeholder".localized
+        searchBar.accessibilityIdentifier = AccessibilityIdentifier.ItemFinderViewController.searchbar
         searchBar.delegate = self
         navigationItem.titleView = searchBar
     }
     
     override func setupNavigationBar() {
+        super.setupNavigationBar()
         navigationController?.isNavigationBarHidden = false
         navigationController?.hidesBarsOnSwipe = true
         navigationItem.titleView?.becomeFirstResponder()
@@ -123,7 +125,7 @@ extension ItemFinderViewController: UITableViewDataSource {
         }
         
         if indexPath.row == (itemList.count - 10) {
-            let offset = itemList.count + 1
+            let offset = itemList.count
             presenter?.fetchItems(textQuery, offset)
         }
     }
