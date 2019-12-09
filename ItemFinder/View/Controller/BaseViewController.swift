@@ -12,6 +12,8 @@ import KRProgressHUD
 class BaseViewController: UIViewController, Connectable {
     
     private var removeNotificationsOnDissapear = false
+    ///Flag for avoiding unnecessary calls on lazy component var notConnectionView
+    private var isConnected: Bool?
     
     private lazy var notConnectionView: UIView = {
         let alpha: CGFloat = 0.8
@@ -111,6 +113,7 @@ extension BaseViewController {
     ///Is triggered when the device lost connection and shows a View alerting about it
     @objc func didLostConnection(notification: Notification) {
         if !isConnectionAvailable() {
+            isConnected = false
             showNotConnectionWarningView()
         }
         
@@ -118,7 +121,8 @@ extension BaseViewController {
     
     ///Is triggered when the device got connection and remove the alerting view
     @objc func didGetConnection(notification: Notification) {
-        if isConnectionAvailable() {
+        if let _ = isConnected, isConnectionAvailable() {
+            isConnected = true
             removeNotConnectionWarningView()
         }
         
@@ -126,6 +130,9 @@ extension BaseViewController {
     
     ///Update connection status on every view
     func updateUIConnectionStatus() {
+        guard let _ = isConnected else {
+            return
+        }
         if isConnectionAvailable() {
             removeNotConnectionWarningView()
         } else {

@@ -17,6 +17,9 @@ class ItemFinderViewController: BaseViewController {
     var debouncer: Debouncer?
     static let identifier = "ItemFinderViewController"
     
+    ///Flag for avoiding unnecessary calls on lazy component var itemNotFoundView
+    var isNotFoundViewHidden: Bool?
+    
     private lazy var itemNotFoundView: UIView = {
         let alpha: CGFloat = 0.2
         let viewColor: UIColor = .black
@@ -170,7 +173,11 @@ extension ItemFinderViewController: ItemFinderViewDelegate {
             self.view.addSubview(itemNotFoundView)
             [itemNotFoundView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
              itemNotFoundView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)].forEach{ $0.isActive = true }
-        } else {
+            isNotFoundViewHidden = false
+            return
+        }
+        if let isNotFoundViewHidden = isNotFoundViewHidden, !isNotFoundViewHidden {
+            self.isNotFoundViewHidden = true
             itemNotFoundView.removeFromSuperview()
         }
     }
