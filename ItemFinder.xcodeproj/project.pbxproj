@@ -226,6 +226,7 @@
 				F42E7115237CBDFB004FC9D1 /* Notifications.swift */,
 				F434815F2382B49C00F0F7BD /* Constants.swift */,
 				F4F7A4EB2385B43F006F549A /* AccessibilityIdentifier.swift */,
+				F43CA12E2377135400A08B9F /* Localizable.strings */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -280,6 +281,8 @@
 		F43CA135237713CA00A08B9F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F447C03C2377118600B8E368 /* Main.storyboard */,
+				F447C0412377118600B8E368 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 		F447C0352377118600B8E368 /* ItemFinder */ = {
 			isa = PBXGroup;
 			children = (
+				F48F915E241EB5F60026C03B /* Resources */,
 				F43CA12F2377138300A08B9F /* Common */,
 				F43CA1382377143F00A08B9F /* Network */,
 				F43CA1372377141100A08B9F /* Service */,
@@ -404,11 +408,6 @@
 				F43CA132237713A600A08B9F /* Presenter */,
 				F447C0362377118600B8E368 /* AppDelegate.swift */,
 				F447C0382377118600B8E368 /* SceneDelegate.swift */,
-				F447C03C2377118600B8E368 /* Main.storyboard */,
-				F447C03F2377118600B8E368 /* Assets.xcassets */,
-				F447C0412377118600B8E368 /* LaunchScreen.storyboard */,
-				F447C0442377118600B8E368 /* Info.plist */,
-				F43CA12E2377135400A08B9F /* Localizable.strings */,
 			);
 			path = ItemFinder;
 			sourceTree = "<group>";
@@ -448,6 +447,15 @@
 				F451BEA923776D3B001B651C /* APIItem.swift */,
 			);
 			path = "API Item";
+			sourceTree = "<group>";
+		};
+		F48F915E241EB5F60026C03B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F447C03F2377118600B8E368 /* Assets.xcassets */,
+				F447C0442377118600B8E368 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F4F639D2238315610038FA0F /* Mocks */ = {
@@ -927,7 +935,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACA42AA29E;
-				INFOPLIST_FILE = ItemFinder/Info.plist;
+				INFOPLIST_FILE = ItemFinder/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -947,7 +955,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACA42AA29E;
-				INFOPLIST_FILE = ItemFinder/Info.plist;
+				INFOPLIST_FILE = ItemFinder/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
